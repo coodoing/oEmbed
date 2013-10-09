@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<providers>
+  <provider>
+    <class>YouTubeProvider</class>
+    <url>http://*.youtube.*/*</url>    
+    <endpoint>http://www.youtube.com/oembed</endpoint>
+  </provider>
+
+  <!--
+  <provider>
+    <class>FlickrProvider</class>
+    <url>http://*.flickr.com/photos/*</url>    
+    <endpoint>http://www.flickr.com/services/oembed/</endpoint>
+  </provider>
+  -->
+  <!--see more detail provider, http://oembed.com/-->
+</providers>
