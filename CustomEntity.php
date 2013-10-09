@@ -1,7 +1,6 @@
 <?php
 
-class OEmbedEntity extends IEmbedEntity{
-
+class CustomEntity extends IEmbedEntity{
 	public $url;
 	public $title;
 	public $price;
@@ -18,5 +17,4 @@ class OEmbedEntity extends IEmbedEntity{
 	}
 
 }
-
 ?>

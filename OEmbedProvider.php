@@ -2,7 +2,6 @@
 
 require_once("OEmbedEntity.php");
 class OEmbedProvider extends IEmbedProvider{
-
     private $urlRegExp;
     private $jsonEndpoint;
     private $xmlEndpoint;

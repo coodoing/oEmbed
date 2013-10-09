@@ -11,7 +11,6 @@ class ProviderManager{
 		}
 		else
 			$xml = null;		
-
 		//echo json_encode($xml);
 
 		foreach($xml->provider as $provider){
@@ -19,9 +18,9 @@ class ProviderManager{
 				$this->register(new OEmbedProvider($provider->url,$provider->endpoint));
 			} 
 			else {
-			    $classname="".$provider->class; // force to be string :)
-		    	$reflection = new ReflectionClass($classname);
-		    	$this->register($reflection->newInstance($provider));//so we could pass config vars
+			    $classname="".$provider->class; 
+		    	$reflection = new ReflectionClass($classname); //use the reflectionclass
+		    	$this->register($reflection->newInstance($provider)); 
 		    }
 		}
 

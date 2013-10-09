@@ -1,8 +1,7 @@
 <?php
 
 # http://www.flickr.com/services/oembed?url=http%3A//flickr.com/photos/bees/2362225867/
-class FlickrEmbedEntity
-{
+class FlickrEmbedEntity extends IEmbedEntity{
 	public $type;
 	public $title;
 	public $author_name;
@@ -20,6 +19,11 @@ class FlickrEmbedEntity
 	public $cache_age;
 	public $provider_name;
 	public $provider_url;
+
+	public function render(){
+
+	}
+
 }
 
 ?>

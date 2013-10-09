@@ -2,14 +2,14 @@
 <providers>
   <provider>
     <class>YouTubeProvider</class>
-    <url>http://*.youtube.*/*</url>    
+    <urlscheme>http://*.youtube.*/*</urlscheme>    
     <endpoint>http://www.youtube.com/oembed</endpoint>
   </provider>
 
   <!--
   <provider>
     <class>FlickrProvider</class>
-    <url>http://*.flickr.com/photos/*</url>    
+    <urlscheme>http://*.flickr.com/photos/*</urlscheme>    
     <endpoint>http://www.flickr.com/services/oembed/</endpoint>
   </provider>
   -->
