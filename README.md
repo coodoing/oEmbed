@@ -7,22 +7,25 @@ oembed implementions
 
 ## User Guide
 
-* youtube provider
+* youtube provider 
 ```
 $provider = new YouTubeProvider("http://*.youtube.*/","http://www.youtube.com/oembed");
 $provider->provide("http://www.youtube.com/watch?v=_ujk4SJVx8E");
 ```
+
 * custom provider
 ```
 $cusProvider = new CustomProvider("http://test.cn","http://test.cn/oembed");
 $cusProvider->provide("");
 ```
+
 * provider manager
 ```
 $proManager = ProviderManager::getInstance();
 $provider=$proManager->provide("http://www.youtube.com/watch?v=_ujk4SJVx8E");
 var_dump($provider) ;
 ```
+
 ## Reference
 
 * php-oembed: http://code.google.com/p/php-oembed/
