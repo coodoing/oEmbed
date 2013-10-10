@@ -1,5 +1,5 @@
 <?php
-require_once("OEmbedProvider.php");
+//require_once("OEmbedProvider.php");
 class ProviderManager{
 	private $providers;
 	private static $_instance;
@@ -19,7 +19,7 @@ class ProviderManager{
 			} 
 			else {
 			    $classname="".$provider->class; 
-		    	$reflection = new ReflectionClass($classname); //use the reflectionclass
+		    	$reflection = new ReflectionClass($classname); 
 		    	$this->register($reflection->newInstance($provider)); 
 		    }
 		}
@@ -31,7 +31,7 @@ class ProviderManager{
 		if(!isset($_instance) || $_instance==null){
 			$_instance = new ProviderManager();
 		}
-	  return $_instance;
+		return $_instance;
 	}
 	
 	public function register($provider){

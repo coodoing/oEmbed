@@ -13,7 +13,7 @@ abstract class IEmbedEntity
     public $thumbnail_width;
     public $thumbnail_height;
 
-	public abstract function render(){
+	public function render(){
 		echo "render";
 	}
 }

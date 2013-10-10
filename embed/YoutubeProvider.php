@@ -1,7 +1,6 @@
 <?php
-
-require_once("IEmbedProvider.php");
-require_once("YoutubeEmbedEntity.php");
+//require_once("IEmbedProvider.php");
+//require_once("YoutubeEmbedEntity.php");
 class YouTubeProvider extends IEmbedProvider {
     public function __construct($url,$endpoint){
         parent::__construct($url,$endpoint);
@@ -55,6 +54,8 @@ class YouTubeProvider extends IEmbedProvider {
         if(preg_match("/(www.)?youtube.com\/watch\?v=([\w-]+)/",$url,$matches)){
             $video_id=$matches[2];
         }
+
+        //$video_id = "_ujk4SJVx8E"; // to specify the video
 
         $youtubeEntity = new YoutubeEmbedEntity();
         $youtubeEntity->type='video';

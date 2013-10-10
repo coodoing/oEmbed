@@ -24,4 +24,11 @@ class UnauthorizedException extends EmbedException{
 	}
 }
 
+class IllegalException extends EmbedException{
+	public function exceptionTrace()
+	{
+		echo "Endpoint illegal";
+	}
+}
+
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-require_once("OEmbedEntity.php");
+//require_once("OEmbedEntity.php");
 class OEmbedProvider extends IEmbedProvider{
     private $urlRegExp;
     private $jsonEndpoint;
@@ -26,7 +26,8 @@ class OEmbedProvider extends IEmbedProvider{
         }
     }
 
-    public function match($url){
+    public function match($url){        
+        //echo $this->urlRegExp,$url;
         return preg_match($this->urlRegExp,$url);
     }
     
@@ -43,7 +44,7 @@ class OEmbedProvider extends IEmbedProvider{
     }
 
     private function provideJSON($url){
-        // echo preg_replace("/\{url\}/",urlencode($url),$this->jsonEndpoint);
+        echo "oembed endpoint: " . preg_replace("/\{url\}/",urlencode($url),$this->jsonEndpoint)."<br>";
         return file_get_contents(preg_replace("/\{url\}/",urlencode($url),$this->jsonEndpoint));
     }
 
