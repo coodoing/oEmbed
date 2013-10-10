@@ -1,0 +1,14 @@
+essence目录结构：
+lib/Essence
+	---cache : 缓存
+	---di : php dependency injection container
+	---dom : html dom 解析，根据tag获取attribute
+	---http : 利用url，两种不同形式(curl，file_get_content)的内容获取
+	---log : 日志处理
+	---provider : oembed和opengraph：从给定的endpoint获取embed数据
+	---utility : json,xml及hash操作
+
+bootstrap.php : autoload
+providers.php : some providers 
+
+系统中主要是根据已知的provider提供服务，获取embed信息，未实现自定义的provider服务

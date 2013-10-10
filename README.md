@@ -29,6 +29,7 @@ var_dump($provider) ;
 ## Reference
 
 * php-oembed: http://code.google.com/p/php-oembed/
+* essence: https://github.com/felixgirault/essence
 * oembed: http://oembed.com/
 * php manuaul: http://www.php.net/manual/zh/index.php
 * youtube Data API: http://gdata.youtube.com/demo/index.html
