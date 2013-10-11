@@ -2,6 +2,7 @@
 
 // Inspired from Essence Lib/Provider/oembed
 class Util{
+
 	public function urlRefactor($url){
 		/**
 		 *	Refactors URLs like these:
@@ -22,6 +23,17 @@ class Util{
 		return $url;
 	}
 
+	/** inline {@inheritdoc} */
+    protected function validateUrl(){
+        return (preg_match('~v=(?:[a-z0-9_-]+)~i', $this->url));
+    }
+
+    /** inline {@inheritdoc} */
+    protected function normalizeUrl(){
+        if (preg_match('~/watch/([0-9]{4,10})~i', $this->url, $matches))
+            $this->url = new \Embera\Url('http://www.hulu.com/watch/' . $matches['1']);
+    }
+
 	/**
 	 *	Strips arguments and anchors from the given URL.
 	 *
@@ -38,6 +50,11 @@ class Util{
 
 		return $url;
 	}
+
+	protected function constructUrl($apiUrl, array $params = array()){
+        $params = array_filter($params);
+        return $apiUrl . ((strpos($apiUrl, '?') === false) ? '?' : '&') . http_build_query($params);
+    }
 
 	/**
 	 *	Strips the end of a string after a delimiter.
@@ -58,6 +75,20 @@ class Util{
 		return $found;
 	}
 
+	/**
+	 *	Fetches embed information from the given URL.
+	 *
+	 *	@param string $url URL to fetch informations from.
+	 *	@param array $options Custom options to be interpreted by the provider.
+	 *	@return Media|null Embed informations, or null if nothing could be
+	 *		fetched.
+	 */
+
+	public final function embed( $url, array $options = array( )) {
+		
+	}
+
+	
 	//trait use namespace closure call_user_func filter_var curl_exec array_intersect_key
 
 }
